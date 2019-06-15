@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VendasComponent } from './Produto/vendas.component';
 import { ProdutoService } from './Produto/produto.service';
+import { ComprasComponent } from './Compras/compras.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    VendasComponent
+    VendasComponent,
+    ComprasComponent
   ],
   imports: [
     BrowserModule, 
@@ -21,6 +23,10 @@ import { ProdutoService } from './Produto/produto.service';
       {
         path: 'vendas',
         component: VendasComponent
+      },
+      {
+        path: 'compras',
+        component: ComprasComponent
       }
     ])
   ],

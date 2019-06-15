@@ -6,7 +6,7 @@ import { Produto } from './produto';
 export class ProdutoService {
   produtos: Produto[] = [];
 
-  criar(produto: Produto): Produto {
+  adicionar(produto: Produto): Produto {
     produto = produto.clone();
     this.produtos.push(produto);
     return produto;

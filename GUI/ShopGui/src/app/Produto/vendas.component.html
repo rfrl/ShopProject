@@ -1,8 +1,9 @@
 <html>
+
 <table>
 <tr>
    <td><label>Nome </label></td>
-   <td><input [(ngModel)]="produtoAtual.name" name="namebox" ></td>
+   <td><input [(ngModel)]="produtoAtual.nome" name="namebox" ></td>
    <td name="addbuttom"><button (click)="criarProduto(produtoAtual)">Adicionar</button></td>
 </tr>
 <tr>
@@ -33,4 +34,5 @@
    <td name="imagelist">{{a.imagem}}</td>
 </tr>
 </table>
+
 </html>

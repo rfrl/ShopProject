@@ -1,0 +1,15 @@
+<table>
+<tr *ngIf="listaProdutos.length > 0">
+    <th>Nome</th>
+    <th>Telefone</th>
+    <th>Preço</th>
+    <th>Imagem</th>
+</tr>
+    <tr *ngFor="let a of listaProdutos" name="listproducts">
+    <td name="nomelist">{{a.nome}}</td>
+    <td name="fonelist">{{a.telefone}}</td>
+    <td name="pricelist">{{a.preco}}</td>
+    <td name="imagelist">{{a.imagem}}</td>
+    <td name="rembuttom"><button (click)="comprarProduto(a)">COMPRAR</button></td>
+</tr>
+</table>
