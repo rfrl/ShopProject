@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { Produto } from './produto';
 
+import { ProdutoService } from './produto.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './vendas.component.html',
   styleUrls: ['./vendas.component.css']
 })
 export class VendasComponent {
-   constructor() {}
+   constructor(private produtoService: ProdutoService) {}
 
    produtoAtual: Produto = new Produto();
    listaProdutos: Produto[];
