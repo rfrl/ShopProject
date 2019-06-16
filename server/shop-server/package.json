@@ -1,0 +1,17 @@
+{
+  "name": "shop-server",
+  "version": "1.0.0",
+  "description": "Servidor da loja de utensílios",
+  "main": "shop-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fbma",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.0.8",
+    "express": "^4.17.1",
+    "typescript": "^3.5.2"
+  }
+}

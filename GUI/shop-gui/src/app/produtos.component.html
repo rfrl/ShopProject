@@ -1,0 +1,30 @@
+<html>
+<h1>
+    Atelier da Dona Rosa
+  </h1>
+  <h2>
+    Adicionar Produtos
+  </h2>
+  
+  <table>
+  <tr>
+     <td><label>Nome </label></td>
+     <td><input [(ngModel)]="produto.nome" ></td>
+     <td><button (click)="criarProduto(produto)">Adicionar</button></td>
+  </tr>
+  <tr>
+     <td><label>Preço </label></td>
+     <td><input type="number" [(ngModel)]="produto.preco" ></td>
+  </tr>
+  <tr>
+     <td><label>Imagem </label></td>
+     <td><input [(ngModel)]="produto.img" ></td>
+  </tr>
+  <tr>
+     <td><label>Quantidade </label></td>
+     <td><input type="number" [(ngModel)]="produto.quantidade" ></td>
+  </tr>
+  </table>
+
+  <router-outlet></router-outlet>
+</html>

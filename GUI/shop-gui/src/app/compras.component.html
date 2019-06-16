@@ -1,0 +1,16 @@
+<html>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+            <th>Imagem</th>
+        </tr>
+        <tr *ngFor="let p of produtos">
+            <td>{{p.nome}}</td>
+            <td >R${{p.preco}}</td>
+            <td>{{p.quantidade}}</td>
+            <td><img src = {{p.img}}></td>
+        </tr>
+    </table>
+</html>
