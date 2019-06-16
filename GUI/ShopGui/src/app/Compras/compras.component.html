@@ -9,7 +9,7 @@
     <td name="nomelist">{{a.nome}}</td>
     <td name="fonelist">{{a.telefone}}</td>
     <td name="pricelist">{{a.preco}}</td>
-    <td name="imagelist">{{a.imagem}}</td>
+    <div name="imagelist" [ngStyle]="{ 'background-image': 'url(' + a.imagem + ')'}"></div>
     <td name="rembuttom"><button (click)="comprarProduto(a)">COMPRAR</button></td>
 </tr>
 </table>

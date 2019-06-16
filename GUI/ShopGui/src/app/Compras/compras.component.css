@@ -6,8 +6,15 @@ nav a {
     color: #ffffff;
     border-radius: 5px;
   }
-  nav a:hover {
+nav a:hover {
     color: #e6e6e6;
     background-color: #1a8cff;
-  }
+}
+
+div{
+  width: 150px;
+  height: 200px;
+  color: rgb(5, 1, 0);
+  -webkit-background-size: cover;
+}
   
