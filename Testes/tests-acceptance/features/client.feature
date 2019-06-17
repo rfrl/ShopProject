@@ -10,7 +10,7 @@ Then eu vejo o produto "Bolsa Gatinho" na lista de produtos
 
 Scenario: Adicionar um produto novo com imagem
 Given estou no menu de produtos
-When eu nao vejo o produto "Meia de patinho" cadastrado
+Given eu nao vejo o produto "Meia de patinho" cadastrado
 When eu tento adicionar o produto "Meia de patinho" com preço "35" quantidade "3" e imagem "https://http2.mlstatic.com/D_NQ_NP_639670-MLB29135134804_012019-Q.jpg"
 Then eu vejo o produto "Bolsa Gatinho" com a imagem "https://http2.mlstatic.com/D_NQ_NP_639670-MLB29135134804_012019-Q.jpg" na lista de produtos
 
@@ -20,4 +20,11 @@ Given eu vejo o produto "Bolsa Gatinho" na lista de produtos a venda
 When eu tento adicionar o produto "Bolsa Gatinho" ao meu carrinho
 Then eu clico no menu finalizar
 Then eu vejo o produto "Bolsa Gatinho" no meu carrinho
+
+Scenario: Finalizar compra
+Given estou no menu de finalizar
+Then eu vejo o produto "Bolsa Gatinho" no meu carrinho
+When eu cadastro o nome "Rodrigo" com telefone "123" email "rfrl" e quantidade "1" na minha lista de dados
+When eu clico na opção finalizar compra
+Then eu nao vejo nenhum produto no meu carrinho
 

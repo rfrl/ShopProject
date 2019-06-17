@@ -10,20 +10,20 @@
      <td>
   <tr>
      <td><label>Nome </label></td>
-     <td><input [(ngModel)]="cliente.nome" ></td>
-     <td><button (click)="criarPedido(pedido)">Realizar Pedido</button></td>
+     <td><input name = "namebox"[(ngModel)]="cliente.nome" ></td>
+     <td><button name = "endbox" (click)="criarPedido(pedido)">Realizar Pedido</button></td>
   </tr>
   <tr>
      <td><label>Telefone </label></td>
-     <td><input type="number" [(ngModel)]="cliente.telefone" ></td>
+     <td><input name = "fonebox"type="number" [(ngModel)]="cliente.telefone" ></td>
   </tr>
   <tr>
      <td><label>email </label></td>
-     <td><input [(ngModel)]="cliente.email" ></td>
+     <td><input name = "emailbox" [(ngModel)]="cliente.email" ></td>
   </tr>
   <tr>
      <td><label>Quantidade </label></td>
-     <td><input type="number" [(ngModel)]="produto.quantidade" ></td>
+     <td><input name = "qtbox" type="number" [(ngModel)]="produto.quantidade" ></td>
   </tr>
 </td>
   <td>
