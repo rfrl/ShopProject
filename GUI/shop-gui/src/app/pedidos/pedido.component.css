@@ -1,0 +1,13 @@
+th {
+    background-color: #3399ff;
+    color: #ffffff;
+  }
+  
+  td, th {
+    text-align: center
+  }
+  
+  tr:hover {
+    background-color: #cce6ff;
+  }
+  

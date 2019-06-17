@@ -1,0 +1,23 @@
+<html>
+
+
+    <table >
+        <td *ngFor="let p of produtos">
+            <tr>
+                <td><img src = {{p.img}}></td>
+            </tr>
+            <tr>
+             <td>{{p.nome}}</td>
+            </tr>
+            <tr>
+                <td>{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
+            </tr>
+            <tr>
+                <td>Restam {{p.quantidade}} em estoque</td>
+            </tr>
+            <tr>
+                <td><button>Adicionar ao Carrinho</button></td>
+            </tr>
+        </td>
+    </table>
+</html>

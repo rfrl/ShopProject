@@ -20,7 +20,7 @@ export class ProdutoService {
     }
 
     atualizar(produto: Produto): Promise<Produto> {
-        return this.http.put(this.shopURL + "/aluno",JSON.stringify(produto), {headers: this.headers})
+        return this.http.put(this.shopURL + "/produto",JSON.stringify(produto), {headers: this.headers})
              .toPromise()
              .then(res => {
                 if (res.json().success) {return produto;} else {return null;}
@@ -36,7 +36,7 @@ export class ProdutoService {
       }
 
       private tratarErro(erro: any): Promise<any>{
-        console.error('Acesso mal sucedido ao serviço de alunos',erro);
+        console.error('Acesso mal sucedido ao serviço de produtos',erro);
         return Promise.reject(erro.message || erro);
       }
 }

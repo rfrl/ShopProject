@@ -1,0 +1,47 @@
+<html>
+  <h2>
+    Informações do Cliente
+  </h2>
+  
+  <table>
+     <td>
+  <tr>
+     <td><label>Nome </label></td>
+     <td><input [(ngModel)]="cliente.nome" ></td>
+     <td><button (click)="criarPedido(pedido)">Realizar Pedido</button></td>
+  </tr>
+  <tr>
+     <td><label>Telefone </label></td>
+     <td><input type="number" [(ngModel)]="cliente.telefone" ></td>
+  </tr>
+  <tr>
+     <td><label>Imagem </label></td>
+     <td><input [(ngModel)]="produto.img" ></td>
+  </tr>
+  <tr>
+     <td><label>Quantidade </label></td>
+     <td><input type="number" [(ngModel)]="produto.quantidade" ></td>
+  </tr>
+</td>
+  <td>
+      <tr>
+            <th>Nome</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+            <th>Imagem</th>
+        </tr>
+        <tr *ngFor="let p of produtos">
+            <td>{{p.nome}}</td>
+            <td >{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
+            <td>{{p.quantidade}}</td>
+            <td><img src = {{p.img}}></td>
+        </tr>
+  </td>
+  </table>
+
+      
+
+
+
+  <router-outlet></router-outlet>
+</html>

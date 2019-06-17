@@ -27,21 +27,12 @@ app.post('/produto', function (req: express.Request, res: express.Response) {
   var produto: Produto = <Produto> req.body; //verificar se é mesmo Aluno!
   produto = estoque.criar(produto);
   if (produto) {
-    res.send({"success": "O aluno foi cadastrado com sucesso"});
+    res.send({"success": "O produto foi cadastrado com sucesso"});
   } else {
-    res.send({"failure": "O aluno não pode ser cadastrado"});
+    res.send({"failure": "O produto não pode ser cadastrado"});
   }
 })
 
-app.put('/produto', function (req: express.Request, res: express.Response) {
-  var produto: Produto = <Produto> req.body;
-  produto = estoque.atualizar(produto);
-  if (produto) {
-    res.send({"success": "O aluno foi atualizado com sucesso"});
-  } else {
-    res.send({"failure": "O aluno não pode ser atualizado"});
-  }
-})
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')

@@ -1,12 +1,10 @@
 <html>
-<h1>
-    Atelier da Dona Rosa
-  </h1>
   <h2>
-    Adicionar Produtos
+    Estoque
   </h2>
   
   <table>
+     <td>
   <tr>
      <td><label>Nome </label></td>
      <td><input [(ngModel)]="produto.nome" ></td>
@@ -24,7 +22,26 @@
      <td><label>Quantidade </label></td>
      <td><input type="number" [(ngModel)]="produto.quantidade" ></td>
   </tr>
+</td>
+  <td>
+      <tr>
+            <th>Nome</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+            <th>Imagem</th>
+        </tr>
+        <tr *ngFor="let p of produtos">
+            <td>{{p.nome}}</td>
+            <td >{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
+            <td>{{p.quantidade}}</td>
+            <td><img src = {{p.img}}></td>
+        </tr>
+  </td>
   </table>
+
+      
+
+
 
   <router-outlet></router-outlet>
 </html>

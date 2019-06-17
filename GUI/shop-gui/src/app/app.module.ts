@@ -6,15 +6,19 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProdutosComponent} from './produtos.component';
-import { ComprasComponent} from './compras.component';
+import { ProdutosComponent} from './produtos/produtos.component';
+import { ComprasComponent} from './compras/compras.component';
+import { PedidoComponent} from './pedidos/pedido.component';
+import { FinalizarComponent } from './finalizar/finalizar.component';
 import { ProdutoService} from './produto.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutosComponent,
-    ComprasComponent
+    ComprasComponent,
+    PedidoComponent,
+    FinalizarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,14 @@ import { ProdutoService} from './produto.service'
       {
         path: 'Produtos',
         component: ProdutosComponent
+      },
+      {
+        path: 'Pedidos',
+        component: PedidoComponent
+      },
+      {
+        path: 'Finalizar',
+        component: FinalizarComponent
       }
     ]),
     AppRoutingModule

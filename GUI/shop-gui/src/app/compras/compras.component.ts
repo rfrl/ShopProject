@@ -1,8 +1,8 @@
 import { Component, OnInit} from '@angular/core'
 import { NgModule } from '@angular/core'
 
-import { Produto } from "./produto"
-import { ProdutoService } from "./produto.service"
+import { Produto } from "../produto"
+import { ProdutoService } from "../produto.service"
 
 @Component ({
     selector: 'compras',
