@@ -13,4 +13,5 @@ export class Pedido{
         this.cliente.clean();
         this.produtos = [];
     }
+
 }
