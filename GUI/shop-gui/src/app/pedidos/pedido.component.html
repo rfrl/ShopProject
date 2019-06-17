@@ -1,0 +1,24 @@
+<html>
+    <nav>
+        <a routerLink="/Finalizar">Ir Para o Carrinho</a>
+    </nav>
+    <table >
+        <td name = "productlist"*ngFor="let p of produtos">
+            <tr>
+                <td name = "imglist"><img src = {{p.img}}></td>
+            </tr>
+            <tr>
+             <td name = "namelist">{{p.nome}}</td>
+            </tr>
+            <tr>
+                <td name = "pricelist">{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
+            </tr>
+            <tr>
+                <td name = "qtlist">Restam {{p.quantidade}} em estoque</td>
+            </tr>
+            <tr>
+                <td><button name = "carbutton">Adicionar ao Carrinho</button></td>
+            </tr>
+        </td>
+    </table>
+</html>
