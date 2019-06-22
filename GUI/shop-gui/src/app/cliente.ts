@@ -19,7 +19,7 @@ export class Cliente{
         return cliente;
     }
 
-    copyFrom(cliente):void{
+    copyFrom(cliente: Cliente):void{
         this.nome=cliente.nome;
         this.telefone=cliente.telefone;
         this.email=cliente.email;        

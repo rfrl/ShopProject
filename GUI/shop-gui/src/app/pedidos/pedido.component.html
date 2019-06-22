@@ -17,7 +17,10 @@
                 <td>Restam {{p.quantidade}} em estoque</td>
             </tr>
             <tr>
-                <td><button>Adicionar ao Carrinho</button></td>
+                <td><input type="number" [ngModel]="p.quantidade"></td>
+            </tr>
+            <tr>
+                <td><button (click)="addLista(p)">Adicionar ao Carrinho</button></td>
             </tr>
         </td>
     </table>

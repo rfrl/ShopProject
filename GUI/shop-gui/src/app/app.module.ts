@@ -11,6 +11,7 @@ import { ComprasComponent} from './compras/compras.component';
 import { PedidoComponent} from './pedidos/pedido.component';
 import { FinalizarComponent } from './finalizar/finalizar.component';
 import { ProdutoService} from './produto.service'
+import { PedidoService} from './pedido.service'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { ProdutoService} from './produto.service'
     ]),
     AppRoutingModule
   ],
-  providers: [ProdutoService],
+  providers: [ProdutoService,PedidoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

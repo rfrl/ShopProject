@@ -15,15 +15,11 @@
   </tr>
   <tr>
      <td><label>Telefone </label></td>
-     <td><input type="number" [(ngModel)]="cliente.telefone" ></td>
+     <td><input [(ngModel)]="cliente.telefone" ></td>
   </tr>
   <tr>
      <td><label>email </label></td>
      <td><input [(ngModel)]="cliente.email" ></td>
-  </tr>
-  <tr>
-     <td><label>Quantidade </label></td>
-     <td><input type="number" [(ngModel)]="produto.quantidade" ></td>
   </tr>
 </td>
   <td>
@@ -33,7 +29,7 @@
             <th>Quantidade</th>
             <th>Imagem</th>
         </tr>
-        <tr *ngFor="let p of produtos">
+        <tr *ngFor="let p of lista">
             <td>{{p.nome}}</td>
             <td >{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
             <td>{{p.quantidade}}</td>

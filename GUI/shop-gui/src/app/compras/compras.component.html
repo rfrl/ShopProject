@@ -1,16 +1,27 @@
 <html>
-    <table>
-        <tr>
+    <table *ngFor="let p of pedidos">
+        <tr >
             <th>Nome</th>
-            <th>Preco</th>
-            <th>Quantidade</th>
+            <th>Telefone</th>
+            <th>e-mail</th>
+        </tr>
+        <tr >
+            <td>{{p.cliente.nome}}</td>
+            <td>{{p.cliente.telefone}}</td>
+            <td>{{p.cliente.email}}</td>
+        </tr>
+        <tr >
             <th>Imagem</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
         </tr>
-        <tr *ngFor="let p of produtos">
-            <td>{{p.nome}}</td>
-            <td >R${{p.preco}}</td>
-            <td>{{p.quantidade}}</td>
-            <td><img src = {{p.img}}></td>
+        <tr *ngFor="let prod of p.produtos">
+            <td><img src={{prod.img}}></td>
+            <td>{{prod.nome}}</td>
+            <td>{{prod.preco}}</td>
+            <td>{{prod.quantidade}}</td>
         </tr>
+        <br><br>
     </table>
 </html>

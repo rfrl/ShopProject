@@ -2,7 +2,8 @@ import { Component, OnInit} from '@angular/core'
 import { NgModule } from '@angular/core'
 
 import { Produto } from "../produto"
-import { ProdutoService } from "../produto.service"
+import { PedidoService } from '../pedido.service';
+import { Cliente } from '../cliente';
 
 @Component ({
     selector: 'finalizar',
@@ -11,18 +12,30 @@ import { ProdutoService } from "../produto.service"
 })
 
 export class FinalizarComponent implements OnInit {
-    constructor(private produtoService: ProdutoService){}
+    constructor(private pedidoService: PedidoService){}
 
-    produtos: Produto[];
+    lista: Produto[];
+    cliente:Cliente;
 
-    atualizarProduto(produto: Produto){
-        this.produtoService.atualizar(produto);
+    criarPedido(cliente){
+        if(this.cliente.nome==""){
+            alert("Você precisa informar um nome!!");
+        }else if(this.cliente.email=="" && this.cliente.telefone==""){
+            alert("Você precisa informar ao menos uma forma de contato")
+        }else if(this.lista.length==0){
+            alert("O carrinho de compras está vazio")
+        }else{
+            this.pedidoService.criarPedido(cliente);
+            this.cliente = new Cliente();
+            this.lista = [];
+        }
     }
 
     ngOnInit(): void{
-        this.produtoService.getProdutos()
-         .then(produtos => this.produtos = produtos)
+        this.pedidoService.getLista()
+         .then(lista => this.lista = lista)
          .catch(erro => alert(erro));
+         this.cliente = new Cliente
    }
     
 }

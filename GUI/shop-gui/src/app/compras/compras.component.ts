@@ -1,8 +1,8 @@
 import { Component, OnInit} from '@angular/core'
 import { NgModule } from '@angular/core'
 
-import { Produto } from "../produto"
-import { ProdutoService } from "../produto.service"
+import { Pedido } from "../pedido"
+import { PedidoService } from "../pedido.service"
 
 @Component ({
     selector: 'compras',
@@ -11,17 +11,13 @@ import { ProdutoService } from "../produto.service"
 })
 
 export class ComprasComponent implements OnInit {
-    constructor(private produtoService: ProdutoService){}
+    constructor(private pedidoService: PedidoService){}
 
-    produtos: Produto[];
-
-    atualizarProduto(produto: Produto){
-        this.produtoService.atualizar(produto);
-    }
+    pedidos: Pedido[];
 
     ngOnInit(): void{
-        this.produtoService.getProdutos()
-         .then(produtos => this.produtos = produtos)
+        this.pedidoService.getPedidos()
+         .then(pedidos => this.pedidos = pedidos)
          .catch(erro => alert(erro));
    }
     
