@@ -3,16 +3,22 @@ import bodyParser = require("body-parser");
 
 import {Produto} from '../../gui/shop-gui/src/app/produto';
 import {CadastroDeProdutos} from './cadastroDeProdutos';
+<<<<<<< HEAD
 import {CadastroDePedidos} from './cadastroDePedidos';
 import {Pedido} from '../../gui/shop-gui/src/app/pedido';
 import { Cliente } from '../../gui/shop-gui/src/app/cliente';
 
+=======
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
 
 var app = express();
 
 var estoque: CadastroDeProdutos = new CadastroDeProdutos();
+<<<<<<< HEAD
 var pedidos: CadastroDePedidos = new CadastroDePedidos();
 var lista: CadastroDeProdutos = new CadastroDeProdutos();
+=======
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
 
 var allowCrossDomain = function(req: any, res: any, next: any) {
     res.header('Access-Control-Allow-Origin', "*");
@@ -29,8 +35,13 @@ app.get('/produtos', function (req, res) {
     res.send(JSON.stringify(estoque.getProdutos()));
 })
 
+<<<<<<< HEAD
 app.post('/produtos', function (req: express.Request, res: express.Response) {
   var produto: Produto = <Produto> req.body;
+=======
+app.post('/produto', function (req: express.Request, res: express.Response) {
+  var produto: Produto = <Produto> req.body; //verificar se é mesmo Aluno!
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
   produto = estoque.criar(produto);
   if (produto) {
     res.send({"success": "O produto foi cadastrado com sucesso"});
@@ -39,6 +50,7 @@ app.post('/produtos', function (req: express.Request, res: express.Response) {
   }
 })
 
+<<<<<<< HEAD
 app.get('/pedidos', function (req, res) {  
   console.log('GET /pedidos: ' + req)
   res.send(JSON.stringify(pedidos.getPedidos()));
@@ -76,6 +88,11 @@ if (produto) {
 
 app.listen(3000, function () {
   console.log('Shop-app listening on port 3000!')
+=======
+
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
 })
 
 export { app }

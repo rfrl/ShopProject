@@ -7,6 +7,7 @@
      <td>
   <tr>
      <td><label>Nome </label></td>
+<<<<<<< HEAD
      <td><input [(ngModel)]="produto.nome" ></td>
      <td><button (click)="criarProduto(produto)">Adicionar</button></td>
   </tr>
@@ -21,6 +22,22 @@
   <tr>
      <td><label>Quantidade </label></td>
      <td><input type="number" [(ngModel)]="produto.quantidade" ></td>
+=======
+     <td><input name = "namebox"[(ngModel)]="produto.nome" ></td>
+     <td><button name = "addbutton"(click)="criarProduto(produto)">Adicionar</button></td>
+  </tr>
+  <tr>
+     <td><label>Preço </label></td>
+     <td><input name = "pricebox" type="number" [(ngModel)]="produto.preco" ></td>
+  </tr>
+  <tr>
+     <td><label>Imagem </label></td>
+     <td><input name = "imgbox" [(ngModel)]="produto.img" ></td>
+  </tr>
+  <tr>
+     <td><label>Quantidade </label></td>
+     <td><input name = "qtbox" type="number" [(ngModel)]="produto.quantidade" ></td>
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
   </tr>
 </td>
   <td>
@@ -30,11 +47,19 @@
             <th>Quantidade</th>
             <th>Imagem</th>
         </tr>
+<<<<<<< HEAD
         <tr *ngFor="let p of produtos">
             <td>{{p.nome}}</td>
             <td >{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
             <td>{{p.quantidade}}</td>
             <td><img src = {{p.img}}></td>
+=======
+        <tr *ngFor="let p of produtos" name = "productlist">
+            <td name = "namelist">{{p.nome}}</td>
+            <td name = "pricelist">{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
+            <td name = "qtlist">{{p.quantidade}}</td>
+            <td name = "imglist"><img src = {{p.img}}></td>
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
         </tr>
   </td>
   </table>

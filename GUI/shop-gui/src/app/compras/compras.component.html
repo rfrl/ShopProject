@@ -1,4 +1,5 @@
 <html>
+<<<<<<< HEAD
     <table *ngFor="let p of pedidos">
         <tr >
             <th>Nome</th>
@@ -23,5 +24,20 @@
             <td>{{prod.quantidade}}</td>
         </tr>
         <br><br>
+=======
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+            <th>Imagem</th>
+        </tr>
+        <tr *ngFor="let p of produtos">
+            <td>{{p.nome}}</td>
+            <td >R${{p.preco}}</td>
+            <td>{{p.quantidade}}</td>
+            <td><img src = {{p.img}}></td>
+        </tr>
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
     </table>
 </html>

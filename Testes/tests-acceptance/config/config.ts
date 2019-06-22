@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { browser, Config } from 'protractor';
+=======
+import { browser, Config } from "protractor";
+>>>>>>> ef43df5f5dab6839a4f23998d79ee68e902ff6d1
 
 export let config: Config = {
 

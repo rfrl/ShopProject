@@ -3,24 +3,22 @@
         <a routerLink="/Finalizar">Ir Para o Carrinho</a>
     </nav>
     <table >
-        <td *ngFor="let p of produtos">
+        <td name = "productlist"*ngFor="let p of produtos">
             <tr>
-                <td><img src = {{p.img}}></td>
+                <td name = "imglist"><img src = {{p.img}}></td>
             </tr>
             <tr>
-             <td>{{p.nome}}</td>
+             <td name = "namelist">{{p.nome}}</td>
             </tr>
             <tr>
-                <td>{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
+                <td name = "pricelist">{{p.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}}</td>
             </tr>
             <tr>
-                <td>Restam {{p.quantidade}} em estoque</td>
+                <td name = "qtlist">Restam {{p.quantidade}} em estoque</td>
             </tr>
             <tr>
-                <td><input type="number" [ngModel]="p.quantidade"></td>
-            </tr>
-            <tr>
-                <td><button (click)="addLista(p)">Adicionar ao Carrinho</button></td>
+                <td><button name = "carbutton" (click) = "addLista(p_">Adicionar ao Carrinho</button></td>
+
             </tr>
         </td>
     </table>
